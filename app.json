@@ -1,11 +1,11 @@
 {
   "expo": {
-    "name": "UniCart",
-    "slug": "UniCart",
+    "name": "React Native Expo Template",
+    "slug": "rn-expo-template",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
-    "scheme": "unicart",
+    "scheme": "rn-expo-template",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {

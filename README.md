@@ -1,50 +1,164 @@
-# Welcome to your Expo app 👋
+# React Native Expo Template with NativeWind
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+A modern React Native skeleton project built with Expo Router and NativeWind (Tailwind CSS for React Native). This template provides a solid foundation for building cross-platform mobile applications with a beautiful, utility-first styling approach.
 
-## Get started
+## ✨ Features
 
-1. Install dependencies
+- 🚀 **Expo Router** - File-based routing for React Native
+- 🎨 **NativeWind v4** - Tailwind CSS for React Native
+- 📱 **Cross-platform** - iOS, Android, and Web support
+- 🔷 **TypeScript** - Full TypeScript support
+- 🏗️ **New Architecture** - React Native's new architecture enabled
+- 📦 **Expo SDK 54** - Latest Expo features and improvements
+- ⚡ **React 19** - Latest React version
+- 🎯 **React Navigation** - Navigation libraries included
+- 🎨 **Modern UI** - Pre-configured with Tailwind CSS utilities
 
-   ```bash
-   npm install
-   ```
+## 📋 Prerequisites
 
-2. Start the app
+Before you begin, ensure you have the following installed:
 
-   ```bash
-   npx expo start
-   ```
+- [Node.js](https://nodejs.org/) (v18 or higher)
+- [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/)
+- [Expo CLI](https://docs.expo.dev/get-started/installation/) (optional, but recommended)
+- [iOS Simulator](https://developer.apple.com/xcode/) (for iOS development on macOS)
+- [Android Studio](https://developer.android.com/studio) (for Android development)
 
-In the output, you'll find options to open the app in a
+## 🚀 Getting Started
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+### Installation
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
+1. Clone the repository:
 
 ```bash
-npm run reset-project
+git clone <your-repo-url>
+cd react-native-nativewind-skeleton
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+2. Install dependencies:
 
-## Learn more
+```bash
+npm install
+```
 
-To learn more about developing your project with Expo, look at the following resources:
+3. Start the development server:
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+```bash
+npm start
+```
 
-## Join the community
+### Running on Different Platforms
 
-Join our community of developers creating universal apps.
+- **iOS Simulator**: `npm run ios`
+- **Android Emulator**: `npm run android`
+- **Web Browser**: `npm run web`
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+## 📁 Project Structure
+
+```
+.
+├── app/                    # Expo Router app directory
+│   ├── _layout.tsx        # Root layout component
+│   └── index.tsx          # Home screen
+├── assets/                 # Static assets (images, icons)
+│   └── images/            # Image assets
+├── src/                    # Source files
+│   └── global.css         # Global Tailwind CSS imports
+├── app.json               # Expo configuration
+├── tailwind.config.js     # Tailwind CSS configuration
+├── tsconfig.json          # TypeScript configuration
+└── package.json           # Project dependencies
+```
+
+## 🛠️ Available Scripts
+
+- `npm start` - Start the Expo development server
+- `npm start:clear` - Start Expo with cleared cache
+- `npm run ios` - Run on iOS simulator
+- `npm run android` - Run on Android emulator
+- `npm run web` - Run in web browser
+- `npm run lint` - Run ESLint
+
+## 🎨 NativeWind Usage
+
+This project uses NativeWind v4, which allows you to use Tailwind CSS classes directly in your React Native components.
+
+### Example
+
+```tsx
+import { View, Text } from "react-native";
+
+export default function MyComponent() {
+  return (
+    <View className="flex-1 items-center justify-center bg-white">
+      <Text className="text-2xl font-bold text-blue-500">
+        Hello NativeWind!
+      </Text>
+    </View>
+  );
+}
+```
+
+### Configuration
+
+Tailwind configuration is located in `tailwind.config.js`. The content paths are configured to scan:
+
+- `./app/**/*.{js,jsx,ts,tsx}`
+- `./src/**/*.{js,jsx,ts,tsx}`
+
+Make sure to import the global CSS file in your root layout (already done in `app/_layout.tsx`).
+
+## 🔧 Technologies Used
+
+- **Expo** (~54.0.27) - React Native framework
+- **Expo Router** (~6.0.17) - File-based routing
+- **NativeWind** (^4.2.1) - Tailwind CSS for React Native
+- **React** (19.1.0) - UI library
+- **React Native** (0.81.5) - Mobile framework
+- **TypeScript** (~5.9.2) - Type safety
+- **React Navigation** - Navigation libraries
+- **Expo Image** - Optimized image component
+- **React Native Reanimated** - Animation library
+
+## 📱 Platform Support
+
+- ✅ iOS
+- ✅ Android
+- ✅ Web
+
+## 🎯 Key Features
+
+### Expo Router
+
+This project uses Expo Router for file-based routing. Create new screens by adding files to the `app/` directory.
+
+### NativeWind v4
+
+NativeWind v4 provides a seamless Tailwind CSS experience in React Native. Use familiar Tailwind utility classes directly in your components.
+
+### New Architecture
+
+The project is configured with React Native's new architecture enabled, providing better performance and developer experience.
+
+### TypeScript
+
+Full TypeScript support with proper type definitions for Expo and React Native.
+
+## 🚧 Development Tips
+
+1. **Hot Reload**: Changes are automatically reflected in your app
+2. **Tailwind Classes**: Use any Tailwind utility classes directly in `className` props
+3. **Type Safety**: Leverage TypeScript for better development experience
+4. **Routing**: Add new routes by creating files in the `app/` directory
+
+## 📝 License
+
+MIT
+
+## 🤝 Contributing
+
+This is a skeleton/template project. Feel free to customize it for your needs!
+
+---
+
+Built with ❤️ using Expo and NativeWind
